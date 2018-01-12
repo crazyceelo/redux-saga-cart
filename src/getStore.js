@@ -28,16 +28,18 @@ export const getStore = ()=>{
     const middleWares = [sagaMiddleware,thunk];
     if (getQuery()['logger']) { middleWares.push(logger)}
     const composables = [applyMiddleware(...middleWares)
-    //    , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    //    , window.__REDUX_DEVTOOLS_EXTENSION__ && window
+    //.__REDUX_DEVTOOLS_EXTENSION__()
     ];
     const enhancer = compose(
         ... composables
-);
+    );
     const store = createStore(
         reducer,
         defaultState,
         enhancer,
     );
+    console.info('saga middleware implemented');
     initSagas(sagaMiddleware);
     return store;
 };
