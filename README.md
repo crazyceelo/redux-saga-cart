@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # redux-saga-cart
 A fully-functional shopping cart built with Redux Saga using Yield
 
@@ -44,3 +45,6 @@ Make sure you're running the latest version of `node`. Make sure the following d
     "webpack-dev-server": "^1.16.5"
 }
 ```
+=======
+# redux-saga-cart
+>>>>>>> 5dedbad580eaa14e46779958bb1fe65cb2b2bb88
