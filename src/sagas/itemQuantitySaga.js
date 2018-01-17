@@ -58,6 +58,14 @@ import {
   FETCHING, FETCHED
 } from '../actions';
 
+export function* handleIncreaseItemQuantity() {
+  // code
+}
+
+export function* handleDecreaseItemQuantity() {
+  // code
+}
+
 export function* itemQuantitySaga() {
   yield [
     takeLatest(DECREASE_ITEM_QUANTITY, handleDecreaseItemQuantity),
