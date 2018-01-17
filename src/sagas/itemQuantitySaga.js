@@ -67,6 +67,14 @@ export function* handleIncreaseItemQuantity({id}) {
   const user = yield select(currentUserSelector);
   const response = yield call(fetch, `http://localhost:8081/cart/add/${user.get('id')}/${id}`);
   console.info('Get Response ', response);
+
+  if (response.status !== 200) {
+    yield put(decreaseItemQuantity(id, true));
+    alert('Sorry, there were not enough items in stock to complete your request.');
+  }
+
+  yield put(setItemQuantityFetchStatus(FETCHED));
+
 }
 
 export function* handleDecreaseItemQuantity() {
