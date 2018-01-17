@@ -58,8 +58,15 @@ import {
   FETCHING, FETCHED
 } from '../actions';
 
-export function* handleIncreaseItemQuantity() {
-  // code
+import {
+  currentUserSelector
+} from '../selectors';
+
+export function* handleIncreaseItemQuantity({id}) {
+  yield put(setItemQuantityFetchStatus(FETCHING));
+  const user = yield select(currentUserSelector);
+  const response = yield call(fetch, `http://localhost:8081/cart/add/${user.get('id')}/${id}`);
+  console.info('Get Response ', response);
 }
 
 export function* handleDecreaseItemQuantity() {
@@ -68,7 +75,7 @@ export function* handleDecreaseItemQuantity() {
 
 export function* itemQuantitySaga() {
   yield [
-    takeLatest(DECREASE_ITEM_QUANTITY, handleDecreaseItemQuantity),
+    // takeLatest(DECREASE_ITEM_QUANTITY, handleDecreaseItemQuantity),
     takeLatest(INCREASE_ITEM_QUANTITY, handleIncreaseItemQuantity)
   ]
 }
