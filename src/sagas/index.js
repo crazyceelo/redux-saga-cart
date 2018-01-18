@@ -16,3 +16,4 @@ export { itemQuantitySaga } from './itemQuantitySaga';
 export { customerServiceAvailabilitySaga } from './customerServiceAvailabilitySaga';
 export { shippingSaga } from './shippingSaga';
 export { taxRateSaga } from './taxRateSaga';
+export { checkoutSaga } from './checkoutSaga';
