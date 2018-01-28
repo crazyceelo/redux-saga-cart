@@ -12,3 +12,12 @@
 //     const data = yield apply(response, response.json);
 //     yield put(setCurrentUser(data));
 // }
+
+import { delay } from 'redux-saga';
+
+export function* currentUserSaga() {
+  while (true) {
+    yield delay(1000);
+    console.info('User saga loop');
+  }
+}

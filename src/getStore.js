@@ -10,6 +10,7 @@ import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk'
 
 import { getQuery } from './utility'
+// import { initSagas } from './initSagas';
 import { initSagas } from './initSagas';
 import { reducer } from './combineReducers';
 import { defaultState } from './defaultState'
@@ -40,6 +41,7 @@ export const getStore = ()=>{
         enhancer,
     );
     console.info('saga middleware implemented');
+    // initSagas(sagaMiddleware);
     initSagas(sagaMiddleware);
     return store;
 };

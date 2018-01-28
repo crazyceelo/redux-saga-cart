@@ -9,3 +9,4 @@
 // export { customerServiceAvailabilitySaga } from './customerServiceAvailabilitySaga';
 // export { checkoutSaga } from './checkoutSaga';
 
+export { currentUserSaga } from './currentUserSaga';
