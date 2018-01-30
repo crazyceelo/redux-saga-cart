@@ -18,3 +18,4 @@ export { customerServiceAvailabilitySaga } from './customerServiceAvailabilitySa
 export { shippingSaga } from './shippingSaga';
 export { taxRateSaga } from './taxRateSaga';
 export { checkoutAvailabilitySaga } from './checkoutAvailabilitySaga';
+export { checkoutSaga } from './checkoutSaga';
