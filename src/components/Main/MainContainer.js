@@ -13,7 +13,7 @@ import {
 
 const mapStateToProps = (state) => {
     return {
-        isCheckingOut:isCheckingOutSelector(state)
+      isCheckingOut: isCheckingOutSelector(state)
     }
 };
 const mapDispatchToProps = (dispatch) => ({
